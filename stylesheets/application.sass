@@ -1,0 +1,102 @@
+body
+  font-family: monaco, Consolas, "Lucida Console", monospace
+  font-size: 11px
+  line-height: 18px
+
+input[type=reg_frm_fld]
+  outline: none
+  transition: .2s all linear
+  margin-left: 25px
+  margin-bottom: 20px
+  display: flex
+  border: 1.5px solid silver
+  border-radius: 3px
+  padding: 8px
+  -webkit-box-sizeing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  width: 85%
+
+label
+  font-size: 11px
+  color: #b3b3b3
+  margin-left: 25px
+  margin-bottom: 5px
+  margin-top: 18px
+
+.container span.radio
+  &::before
+    left: -52px
+    width: 45px
+    height: 25px
+    background-color: #A8AAC1
+    border-radius: 50px
+  &::after
+    left: -49px
+    width: 17px
+    height: 17px
+    border-radius: 10px
+    background-color: #6C788A
+    transition: left .25s, background-color .25s
+
+input[type=radio] + label span.radio
+  left: -27px
+  width: 28px
+  display: inline-block
+
+div
+  &#content
+    border-radius: 16px
+    border: 2.2px solid #ffffff
+    background-color: #003c9b
+    box-shadow: 1px 0px 15px grey
+    max-width: 400px
+    margin: 0 auto
+    margin-top: 40px
+  &#form_content
+    padding: 20px
+  &#title
+    margin-left: 90px
+    margin-bottom: 10px
+    display: inline-block
+    border-radius: 12px
+    background-color: #e30c71
+    border: 2px solid #ffffff
+    color: white
+    font-weight: bold
+    text-align: center
+    text-transform: uppercase
+    padding: 11px
+    font-size: 16px
+    width: 50%
+
+input
+  &[type=frm_fld_birth_d], &[type=frm_fld_birth_m], &[type=frm_fld_birth_y]
+    margin-left: 10px
+    margin-right: 10px
+    border: 1.5px solid silver
+    border-radius: 2.5px
+    padding: 8px
+    padding-left: 2px
+    -webkit-box-sizeing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    width: 14%
+  &[type=submit]
+    padding: 5px 10px 5px 10px
+    margin-top: 30px
+    margin-bottom: 20px
+    background-color: #ffffff
+    border-radius: 4px
+    border: 1px solid #3333ff
+    text-transform: uppercase
+    text-align: center
+    color: #3385ff
+    font-weight: bold
+    font-size: 18px
+    width: 80%
+  &:focus
+    border: 1.5px solid #ffffff
+
+textarea:focus
+  border: 1.5px solid #ffffff

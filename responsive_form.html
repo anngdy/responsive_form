@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <link href="stylesheets/datepicker.css" rel="stylesheet" type="text/css"/>
+    <link href="stylesheets/application.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/jquery.zebra-datepicker.js"></script>
+
+</head>
+<body>
+	
+    <div id="title"> PREENCHA: </div>
+	  <div id="content">
+	    <div id="form_content">
+	      <form name="frm_subscription" action="" method="POST" id="frm_subscription">
+	      	<label>* NOME:</label>
+	  	    <input type="reg_frm_fld" name="fld_name" placeholder="Nome" class="reg_fld" />
+	  	    
+	  	    <label>* SOBRENOME:</label>
+	  	    <input type="reg_frm_fld" name="fld_lastname" placeholder="Sobrenome" class="reg_fld" />
+	  	    
+	  	      <ul class="gender-options">
+	  	        <label>* GENERO:</label>
+	  	        <li class= "gender-option female">
+	  	          <input name="female" type="radio"  value="fem" id="rd_fem">
+	  	            <label for="female"> FEMININO </label>
+	  	        </li>
+
+	  	        <li class= "gender-option male">
+	  	          <input name="male" type="radio"  value="masc" id="rd_masc" checked>
+	  	            <label for="male"> MASCULINO </label>
+	  	        </li>
+	  	      </ul>
+
+	  	    <br>
+	  	    <br>
+	  	    <br>
+	  	    <br> 
+
+		    <label>* NASCIMENTO:</label>
+	  	    <input type="reg_frm_fld" name="fld_birth" placeholder="DD/MM/AAAA" id="datepicker1" />
+	  	    
+		    
+		    <label>* DDD + CELULAR:</label>
+		    <input type="reg_frm_fld" name="fld_mobile" placeholder="DDD+Celular" id="mobile" />
+
+		    <label>* E-MAIL:</label>
+	  	    <input type="reg_frm_fld" name="fld_email" placeholder="E-mail" class="reg_fld" />
+	  	    
+	  	    <label>* CONFIRME O E-MAIL:</label>
+	  	    <input type="reg_frm_fld" name="fld_email" placeholder="Confirme o e-mail" class="reg_fld" />
+
+	  	    <label>* VOCÊ É DESENVOLVEDOR?</label>
+	  	    <ul class="developer-select">
+	  	      <li class="developer-select yes">
+	  	      	<input name="yes" type="radio" value="yes" id="rd_yes"/> 
+	  	    	  <label for="rd_yes"> SIM </label>
+	  	      </li>
+
+	  	      <li class="developer-select no">
+	  	      	<input name="no" type="radio" value="no" id="rd_yes" checked="" /> 
+	  	      	  <label for="rd_no"> NÃO</label>
+	  	      	
+	  	      </li>
+
+	        <input type="submit" name="send" value="inscrever"></input>
+	      </form>
+	    </div>
+
+	</div>
+
+	<!-- ******************************************************** -->
+	<!-- 					JAVASCRIPT -->
+	<!-- ******************************************************** -->
+
+	<script type="text/javascript">
+
+      $(document).ready(function(){
+        $("input").blur(function(){
+          if($(this).val() == "")
+          {
+            $(this).css({"border" : "1px solid #F00", "padding": "2px"});
+          }
+        });
+
+        $("#botao").click(function(){
+          var cont = 0;
+          $("#frm_subscription input").each(function(){
+            if($(this).val() == "")
+            {
+              $(this).css({"border" : "1px solid #F00", "padding": "2px"});
+              cont++;
+            }
+          });
+          if(cont == 0)
+           {
+            $("#frm_subscription").submit();
+           }
+        });
+      });
+    </script>
+
+</body>
+</html

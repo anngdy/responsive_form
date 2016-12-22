@@ -1,0 +1,152 @@
+/* =============================================
+				RESPONSIVE FORM 
+=============================================== */
+
+body {
+  font-family: monaco, Consolas, "Lucida Console", monospace ;
+  font-size: 11px;
+  line-height: 18px;
+}
+
+div#title{
+	margin-left: 845px;
+	margin-bottom: -40px;
+	display: inline-block;
+	border-radius: 12px; 
+	background-color: #e30c71;
+	border: 1.2px solid #ffffff;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 11px;
+	font-size: 16px;
+	width: 10%
+}
+
+div#content{
+    border-radius: 16px;
+    border: 2px solid #ffffff;
+	background-color: #003c9b;
+	box-shadow: 1px 0px 10px grey;
+	max-width: 400px;
+	margin: 0 auto; 
+}
+
+div#form_content{
+	padding: 20px;	
+}
+
+label{
+	font-size: 11px;
+	color: #b3b3b3;
+	margin-left: 25px;
+	margin-bottom: 5px;
+	margin-top: 18px;
+}
+
+input[type=reg_frm_fld]{
+	outline: none;
+	transition: .2s all linear;
+	margin-left: 25px;
+	margin-bottom: 20px;
+	display: flex;
+	border: 1.5px solid silver;
+	border-radius: 3px;
+	padding: 8px;
+	-webkit-box-sizeing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 85% 
+}
+
+
+input[type=frm_fld_birth]{
+	margin-left: 10px;
+	margin-right: 10px;
+	border: 1.5px solid silver;
+	border-radius: 2.5px;
+	padding: 8px;
+	padding-left: 2px;
+	-webkit-box-sizeing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 14% 
+}
+
+ul{
+  list-style: none;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+ul li input[type=radio]{
+  position: absolute;
+  margin-left: 25px;
+}
+
+ul li label{
+  font-weight: 300;
+  font-size: 11px;
+  margin-left: 45px;
+}
+
+ul:after{
+	word-wrap: break-word;
+	content: "";
+	display: block;
+	clear: both;
+	white-space: pre
+}
+
+.gender-options {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.gender-options:after{
+	content: "";
+	clear: both;
+}
+
+.gender-options{
+	border: 0.5px solid #003c9b;
+	box-sizing: border-box;
+	float: left;
+	height: 70px;
+	position: relative;
+	width: 120px;
+}
+
+.gender-options + .gender-options{
+	margin-left: 25px;
+}
+
+.developer-select{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+input[type=submit]{
+	padding: 5px 10px 5px 10px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	margin-left: 35px;
+	background-color: #ffffff;
+	border-radius: 4px;
+	border: 1px solid #3333ff;
+	text-transform: uppercase;
+	text-align: center;
+	color: #3385ff;
+	font-weight: bold;
+	font-size: 18px;
+	width: 80%;
+}
+
+input:focus, textarea:focus{
+	border: 1.5px solid #ffffff;
+}
